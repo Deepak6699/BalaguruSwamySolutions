@@ -7,10 +7,60 @@
 #include <time.h>
 
 using namespace std;
-
-
-
-
+class Player {
+	const char* teamMember;
+	int runs;
+	int innings;
+	int timesNotOut;
+	double averageOfPlayer;
+public:
+	Player(const char* name,int r, int i, int t) {
+		teamMember = name;
+		runs = r;
+		innings = i;
+		timesNotOut = t;
+	}
+	int getRuns();
+	int getInnings();
+	int getTimesNotOut();
+	double caluclateAverage();
+	const char* getPlayerName() {
+		return teamMember;
+	}
+	};
+double Player::caluclateAverage() {
+	averageOfPlayer = runs / innings;
+	return averageOfPlayer;
+}
+int Player::getRuns() {
+	return runs;
+}
+int Player::getInnings() {
+	return innings;
+}
+int Player::getTimesNotOut() {
+	return timesNotOut;
+}
+int main() {
+	Player Sachin("Sachin",8340,230,18), Savrav("Savrav",4200,130,9), Rahul("Rahul",3350,105,11);
+	/*Sachin.setRuns(8340);
+	Sachin.setInnings(230);
+	Sachin.setTimesNotOut(18);
+	Savrav.setRuns(4200);
+	Savrav.setInnings(130);
+	Savrav.setTimesNotOut(9);
+	Rahul.setRuns(3350);
+	Rahul.setInnings(105);
+	Rahul.setTimesNotOut(11);*/
+	cout << "Players Name \t Runs \t Innings \t Times Not Out \t Average" << endl;
+	cout<<Sachin.getPlayerName()<<"\t"<<Sachin.getRuns()<<"\t"<<Sachin.getInnings()<<"\t"<<Sachin.getTimesNotOut()<<"\t"<<Sachin.caluclateAverage()<<endl;
+	cout << Savrav.getPlayerName() << "\t" << Savrav.getRuns() << "\t" << Savrav.getInnings() << "\t" << Sachin.getTimesNotOut() << "\t" << Savrav.caluclateAverage() << endl;
+	cout << Rahul.getPlayerName() << "\t" << Rahul.getRuns() << "\t" << Rahul.getInnings() << "\t" << Rahul.getTimesNotOut() << "\t" << Sachin.caluclateAverage() << endl;
+	cout<<"Sachin Average "<<Sachin.caluclateAverage()<<endl;
+	cout << "Savrav Average " << Savrav.caluclateAverage() << endl;
+	cout << "Rahul Average " << Rahul.caluclateAverage() << endl;
+	return 0;
+}
 
 
 //****************************************************************************************************
