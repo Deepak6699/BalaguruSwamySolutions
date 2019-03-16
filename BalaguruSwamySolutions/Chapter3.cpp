@@ -24,10 +24,19 @@ public:
 	int getInnings();
 	int getTimesNotOut();
 	double caluclateAverage();
+	void displayDetails();
 	const char* getPlayerName() {
 		return teamMember;
 	}
 	};
+void Player::displayDetails() {
+	cout << this->getPlayerName() << "\t" << this->getRuns() << "\t" << this->getInnings() << "\t" << this->getTimesNotOut() << "\t" << this->caluclateAverage() << endl;
+	/*this->getPlayerName();
+	this->getRuns();
+	this->getInnings();
+	this->getTimesNotOut();
+	this->caluclateAverage();*/
+}
 double Player::caluclateAverage() {
 	averageOfPlayer = runs / innings;
 	return averageOfPlayer;
@@ -53,12 +62,15 @@ int main() {
 	Rahul.setInnings(105);
 	Rahul.setTimesNotOut(11);*/
 	cout << "Players Name \t Runs \t Innings \t Times Not Out \t Average" << endl;
-	cout<<Sachin.getPlayerName()<<"\t"<<Sachin.getRuns()<<"\t"<<Sachin.getInnings()<<"\t"<<Sachin.getTimesNotOut()<<"\t"<<Sachin.caluclateAverage()<<endl;
+	Sachin.displayDetails();
+	Savrav.displayDetails();
+	Rahul.displayDetails();
+	/*cout<<Sachin.getPlayerName()<<"\t"<<Sachin.getRuns()<<"\t"<<Sachin.getInnings()<<"\t"<<Sachin.getTimesNotOut()<<"\t"<<Sachin.caluclateAverage()<<endl;
 	cout << Savrav.getPlayerName() << "\t" << Savrav.getRuns() << "\t" << Savrav.getInnings() << "\t" << Sachin.getTimesNotOut() << "\t" << Savrav.caluclateAverage() << endl;
 	cout << Rahul.getPlayerName() << "\t" << Rahul.getRuns() << "\t" << Rahul.getInnings() << "\t" << Rahul.getTimesNotOut() << "\t" << Sachin.caluclateAverage() << endl;
 	cout<<"Sachin Average "<<Sachin.caluclateAverage()<<endl;
 	cout << "Savrav Average " << Savrav.caluclateAverage() << endl;
-	cout << "Rahul Average " << Rahul.caluclateAverage() << endl;
+	cout << "Rahul Average " << Rahul.caluclateAverage() << endl;*/
 	return 0;
 }
 
