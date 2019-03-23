@@ -18,8 +18,13 @@ class Bill {
 	double amount;
 	int rowHouseNumber;
 public:
+	Bill() {
+	}
 	Bill(int rowHouse) {
 		rowHouseNumber = rowHouse;
+	}
+	int vectorSize() {
+		return user.size();
 	}
 	double caluclateBill(string,long int);
 	void displayBill();
@@ -46,10 +51,13 @@ double Bill::caluclateBill(string userName,long int units) {
 	}
 	return billAmount;
 }
-int main() {
-
-	Bill bill(2);
-	cout << bill.caluclateBill(bill.getUser(), bill.getUnits()) << endl;
+int main(){
+	Bill billEntry;
+	cout << billEntry.vectorSize()<<endl;
+	for (int i = 1; i <= billEntry.vectorSize(); i++) {
+		Bill bill(i);
+		cout << bill.caluclateBill(bill.getUser(), bill.getUnits()) << endl;
+	}
 	return 0;
 }
 
