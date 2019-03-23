@@ -7,59 +7,65 @@
 #include <time.h>
 
 using namespace std;
-//1st 100 = 60p
-//next 200 = 80p]
-//beyond 300 = 90p
-//minimum of 50rps
-//if>300 15% surchanrge
-class Bill {
-	vector<string> user = {"Sam","Nikhil","Chiru","Vishnu","Deepak","Venu"};
-	vector<long int> noOfUnits = {23200,1900,1234500,100,10000,200};
-	double amount;
-	int rowHouseNumber;
-public:
-	Bill() {
-	}
-	Bill(int rowHouse) {
-		rowHouseNumber = rowHouse;
-	}
-	int vectorSize() {
-		return user.size();
-	}
-	double caluclateBill(string,long int);
-	void displayBill();
-	string getUser() {
-		//int i = rowHouseNumber - 1;
-		//for (i = 0; i < user.size(); i++)
-			return user.at(rowHouseNumber-1);
-	}
-	long int getUnits() {
-		return noOfUnits.at(rowHouseNumber -1);
-	}
-};
-double Bill::caluclateBill(string userName,long int units) {
-	double billAmount = 50;
-	if(units>=0 && units<=100){
-		billAmount += (units * 60) * 0.01;
-	}
-	if (units > 100 && units <= 300) {
-		billAmount += (units * 80)*0.01;
-	}
-	if (units > 300) {
-		billAmount += (units * 90)*0.01;
-		billAmount += billAmount * 0.15;
-	}
-	return billAmount;
-}
-int main(){
-	Bill billEntry;
-	cout << billEntry.vectorSize()<<endl;
-	for (int i = 1; i <= billEntry.vectorSize(); i++) {
-		Bill bill(i);
-		cout << bill.caluclateBill(bill.getUser(), bill.getUnits()) << endl;
-	}
-	return 0;
-}
+
+
+
+
+
+//Exercise 3.7
+////1st 100 = 60p
+////next 200 = 80p]
+////beyond 300 = 90p
+////minimum of 50rps
+////if>300 15% surchanrge
+//class Bill {
+//	vector<string> user = {"Sam","Nikhil","Chiru","Vishnu","Deepak","Venu"};
+//	vector<long int> noOfUnits = {23200,1900,1234500,100,10000,200};
+//	double amount;
+//	int rowHouseNumber;
+//public:
+//	Bill() {
+//	}
+//	Bill(int rowHouse) {
+//		rowHouseNumber = rowHouse;
+//	}
+//	int vectorSize() {
+//		return user.size();
+//	}
+//	double caluclateBill(string,long int);
+//	void displayBill();
+//	string getUser() {
+//		//int i = rowHouseNumber - 1;
+//		//for (i = 0; i < user.size(); i++)
+//			return user.at(rowHouseNumber-1);
+//	}
+//	long int getUnits() {
+//		return noOfUnits.at(rowHouseNumber -1);
+//	}
+//};
+//double Bill::caluclateBill(string userName,long int units) {
+//	double billAmount = 50;
+//	if(units>=0 && units<=100){
+//		billAmount += (units * 60) * 0.01;
+//	}
+//	if (units > 100 && units <= 300) {
+//		billAmount += (units * 80)*0.01;
+//	}
+//	if (units > 300) {
+//		billAmount += (units * 90)*0.01;
+//		billAmount += billAmount * 0.15;
+//	}
+//	return billAmount;
+//}
+//int main(){
+//	Bill billEntry;
+//	cout << billEntry.vectorSize()<<endl;
+//	for (int i = 1; i <= billEntry.vectorSize(); i++) {
+//		Bill bill(i);
+//		cout << bill.caluclateBill(bill.getUser(), bill.getUnits()) << endl;
+//	}
+//	return 0;
+//}
 
 
 
