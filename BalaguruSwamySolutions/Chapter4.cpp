@@ -5,40 +5,46 @@
 #include <cmath>
 #include <stdlib.h>
 #include <time.h>
+#define WINDOWS 1
+#define MAC 2
+#define LINUX 10
+#define OS LINUX
 
 using namespace std;
-
-
-
-
-
+int main() {
+#if OS == 10
+	cout << "Windows"<<endl;
+#else
+	cout << "something else is defined" << endl;
+#endif
+}
 
 //**************************************************************************************************************************
 //Exercise 4.3
-//vector<int> newVector;
-//void readTheMatrix(int m=3,int n=1) {
-//	int giveTheLead;
-//	cout << "Enter the numbers you wanted to push into the matrix" << endl;
+//vector<int> newvector;
+//void readthematrix(int m=3,int n=1) {
+//	int givethelead;
+//	cout << "enter the numbers you wanted to push into the matrix" << endl;
 //	for (int i = 0; i < m; i++) {
-//		cout << "Now you are in row " << i << endl;
+//		cout << "now you are in row " << i << endl;
 //		for (int j = 0; j < n; j++) {
-//			cout << "Enter the numbers you wanted in row " << i << "column " << j << endl;
-//			cin >> giveTheLead;
-//			newVector.push_back(giveTheLead);
+//			cout << "enter the numbers you wanted in row " << i << "column " << j << endl;
+//			cin >> givethelead;
+//			newvector.push_back(givethelead);
 //		}
 //	}
 //}
 //
 //int main() {
 //	int m, n;
-//	cout << "Enter the size of matrix " << endl;
+//	cout << "enter the size of matrix " << endl;
 //	cin >> m >> n;
-//	readTheMatrix(m, n);
-//	int startOfVector = 0;
+//	readthematrix(m, n);
+//	int startofvector = 0;
 //		for (int j = 0; j < m; j++) {
 //			for (int k = 0; k < n; k++) {
-//				cout << newVector.at(startOfVector) << " ";
-//				startOfVector++;
+//				cout << newvector.at(startofvector) << " ";
+//				startofvector++;
 //			}
 //			cout << endl;
 //		}
