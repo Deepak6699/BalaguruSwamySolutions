@@ -5,19 +5,26 @@
 #include <cmath>
 #include <stdlib.h>
 #include <time.h>
-#define WINDOWS 1
-#define MAC 2
-#define LINUX 10
-#define OS LINUX
 
-using namespace std;
-int main() {
-#if OS == 10
-	cout << "Windows"<<endl;
-#else
-	cout << "something else is defined" << endl;
-#endif
-}
+
+
+//***************************************************************************************
+//Exercise 4.5
+////#define WINDOWS 1
+////#define MAC 2
+////#define LINUX 10
+////#define OS LINUX
+//#define LARGEST(x,y,z) (x>y?x:(y>z)?y:z)
+//
+//using namespace std;
+//int main() {
+////#if OS == 10
+//	cout<<LARGEST(76576, 20, 30)<<endl;
+////	cout << "Windows"<<endl;
+////#else
+////	cout << "something else is defined" << endl;
+////#endif
+//}
 
 //**************************************************************************************************************************
 //Exercise 4.3
