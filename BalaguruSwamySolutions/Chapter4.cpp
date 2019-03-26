@@ -7,23 +7,42 @@
 #include <time.h>
 
 
-
+//using namespace std;
+//inline int largest(int a, int b, int c) {
+//	if (a > b) {
+//		if (a > c) {
+//			return a;
+//		}
+//		else {
+//			return c;
+//		}
+//	}
+//	else if(b>c) {
+//		return b;
+//	}
+//	return c;
+//}
+//int main() {
+//
+//	cout<<largest(5456, 678687, 67890987)<<endl;
+//	return 0;
+//}
 //***************************************************************************************
 //Exercise 4.5
-////#define WINDOWS 1
-////#define MAC 2
-////#define LINUX 10
-////#define OS LINUX
-//#define LARGEST(x,y,z) (x>y?x:(y>z)?y:z)
+//#define windows 1
+//#define mac 2
+//#define linux 10
+//#define os linux
+//#define largest(x,y,z) (x>y?((x>z)?x:z):((y>z)?y:z))
 //
 //using namespace std;
 //int main() {
-////#if OS == 10
-//	cout<<LARGEST(76576, 20, 30)<<endl;
-////	cout << "Windows"<<endl;
-////#else
-////	cout << "something else is defined" << endl;
-////#endif
+//#if os == 10
+//	cout<<largest(76576, 20, 987987)<<endl;
+//	cout << "windows"<<endl;
+//#else
+//	cout << "something else is defined" << endl;
+//#endif
 //}
 
 //**************************************************************************************************************************
