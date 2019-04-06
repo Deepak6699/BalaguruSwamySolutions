@@ -1,16 +1,16 @@
 #pragma once
-#ifndef CHAPTER5_H
-#define CHAPTER5_H
+#ifndef CHAPTER_H
+#define CHAPTER_H
 class BankAccount {
-	char* depositor;
+	const char* depositor;
 	long accNumber;
-	char* type;
+	const char* type;
 	double depositAmount;
 	double balAmount;
 public:
-	BankAccount(char*, long, char*, double);
+	BankAccount(const char*, long,const char*,double, double);
 	void DepositAmount(double);
-	double withDraw(double);
+	double withDraw();
 	void display();
 	friend void displayfriendsDetails(BankAccount &bankAccount);
 };

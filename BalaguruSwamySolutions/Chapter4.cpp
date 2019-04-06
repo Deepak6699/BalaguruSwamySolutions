@@ -7,7 +7,9 @@
 #include <time.h>
 
 
-//using namespace std;
+using namespace std;
+//******************************************************************************************************
+//Exercise 4.6
 //inline int largest(int a, int b, int c) {
 //	if (a > b) {
 //		if (a > c) {
